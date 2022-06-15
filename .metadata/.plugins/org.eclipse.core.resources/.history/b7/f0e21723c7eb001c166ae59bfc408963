@@ -1,0 +1,5 @@
+package com.techouts.entity;
+
+public class Employee {
+
+}

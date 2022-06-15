@@ -1,0 +1,46 @@
+package com.example.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.example.crudDemo.entity.Employee;
+import com.example.dao.EmployeeDao;
+
+public class EmployeeServiceImpl implements EmployeeService
+{
+
+	private EmployeeDao employeeDao;
+	@Autowired
+	public EmployeeServiceImpl(EmployeeDao employeeDao)
+	{
+		employeeDao=employeeDao;
+	}
+	
+	@Override
+	@Transactional
+	public List<Employee> findAll() {
+	
+		return employeeDao.findAll();
+	}
+
+	@Override
+	public Employee findById(int theId) {
+		
+		return employeeDao.findById(theId);
+	}
+
+	@Override
+	public void save(Employee emp) 
+	{
+	 employeeDao.save(emp);	
+	}
+
+	@Override
+	public void deleteById(int theid)
+	{
+	employeeDao.deleteById(theid);		
+	}
+       
+}

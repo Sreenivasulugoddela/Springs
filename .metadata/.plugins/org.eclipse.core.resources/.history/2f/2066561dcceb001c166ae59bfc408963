@@ -1,0 +1,5 @@
+package com.example.crudDemo.entity;
+
+public class Employee {
+
+}

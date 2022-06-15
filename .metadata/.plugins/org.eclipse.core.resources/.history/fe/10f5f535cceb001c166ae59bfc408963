@@ -1,0 +1,55 @@
+package com.example.crudDemo.entity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Employee 
+{
+    private int empId;
+    
+    private String eName;
+    
+    private String deptName;
+    
+    public Employee()
+    {
+    	
+    }
+
+	public Employee(int empId, String eName, String deptName) {
+		super();
+		this.empId = empId;
+		this.eName = eName;
+		this.deptName = deptName;
+	}
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+
+	public String geteName() {
+		return eName;
+	}
+
+	public void seteName(String eName) {
+		this.eName = eName;
+	}
+
+	public String getDeptName() {
+		return deptName;
+	}
+
+	public void setDeptName(String deptName) {
+		this.deptName = deptName;
+	}
+
+	@Override
+	public String toString()
+	{
+		return "Employee [empId=" + empId + ", eName=" + eName + ", deptName=" + deptName + "]";
+	}
+}
